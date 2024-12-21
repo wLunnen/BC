@@ -1,71 +1,26 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+function submitSurvey() {
+    // Get survey form
+    const form = document.getElementById('survey-form');
+    
+    // Collect form data
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.getElementById('q3').value;
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
-}
+    // Validate form submission
+    if (!q1 || !q2) {
+        alert("Please answer all the questions.");
+        return;
+    }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    // Hide survey and show thank you message
+    form.style.display = 'none';
+    const thankYouMessage = document.getElementById('thank-you-message');
+    thankYouMessage.style.display = 'block';
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.question {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.options label {
-    display: block;
-    margin-left: 20px;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.hidden {
-    display: none;
-}
-
-#thank-you-message {
-    text-align: center;
-    margin-top: 20px;
+    // Log the answers (for demonstration purposes)
+    console.log("Survey Submitted:");
+    console.log("Q1: " + q1.value);
+    console.log("Q2: " + q2.value);
+    console.log("Q3: " + q3);
 }
