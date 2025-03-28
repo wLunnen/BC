@@ -73,3 +73,13 @@ button:hover {
     text-align: center;
     margin-top: 20px;
 }
+
+/* left right center button elements */
+
+.switch-toggle {
+  width: 10em;
+}
+
+.switch-toggle label:not(.disabled) {
+  cursor: pointer;
+}
