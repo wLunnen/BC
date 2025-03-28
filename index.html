@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B</title>
+    <title>Questionnaire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1 id="center">Let me</h1>
+        <h1 id="center">How can I help you?</h1>
     </header>
     
-    <div class="container">
-        <h1 id="center">know you</h1>
-
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    
+    <div class="container" id="professional">
+ 
             <div class="question">
                 <label for="q1">1. What are your goals with software development?</label>
             </br>
@@ -37,6 +41,41 @@
 
             <div class="question">
                 <label for="q4">4. Anything else you'd like me to know?</label>
+            </br>
+                <textarea id="q4" name="43" rows="4"></textarea>
+            </div>
+            </br>
+
+            <button type="button" onclick="submitSurvey()">Submit</button>
+       </form>
+   
+    </div>
+
+    <div class="container" id="personal">
+ 
+            <div class="question">
+                <label for="q1">1. What are your intentions with my daughter?</label>
+            </br>
+                <textarea id="q1" name="43" rows="4"></textarea>
+            </div>
+            </br>
+
+            <div class="question">
+                <label for="q2">2. How else do you break the ice?</label>
+            </br>
+                <textarea id="q2" name="43" rows="4"></textarea>
+            </div>
+            </br>
+
+            <div class="question">
+                <label for="q3">3. Are you making any jokes during the writing of your reply? (Y/N)</label>
+            </br>
+                <textarea id="q3" name="43" rows="4"></textarea>
+            </div>
+            </br>
+
+            <div class="question">
+                <label for="q4">4. This is a rhetorical question in the form of a statement.</label>
             </br>
                 <textarea id="q4" name="43" rows="4"></textarea>
             </div>
